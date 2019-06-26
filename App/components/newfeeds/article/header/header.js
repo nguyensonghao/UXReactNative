@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, Button } from 'react-native';
+import { View, Text, Image } from 'react-native';
 
 import { style } from './header.style';
 
@@ -14,7 +14,7 @@ export default class Header extends Component {
                 <View style={style.avatar}>
                     <Image
                         style={style.avatarImage}
-                        source={require('../../../assets/images/avatar.jpg')}
+                        source={require('../../../../assets/images/avatar.jpg')}
                     />
                 </View>
                 <View>

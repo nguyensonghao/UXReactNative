@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, Image } from 'react-native';
 
 import { style } from './comment.style';
+import BoxComment from './boxComent/boxComent';
 
 export default class Comment extends Component {
     render() {
@@ -12,7 +13,7 @@ export default class Comment extends Component {
                     <View style={style.avatarContainer}>
                         <Image
                             style={style.avatarImage}
-                            source={require('../../../assets/images/avatar.jpg')}
+                            source={require('../../../../assets/images/avatar.jpg')}
                         />
                     </View>
                     <View style={style.contentContainer}>
@@ -26,6 +27,7 @@ export default class Comment extends Component {
                         </View>
                     </View>
                 </View>
+                <BoxComment/>
             </View>
         )
     }

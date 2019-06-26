@@ -20,7 +20,7 @@ export default class Content extends Component {
                 <View>
                     <Image
                         style={{ height: imageHeight, width: imageWidth }}
-                        source={require('../../../assets/images/newfeeds.jpg')}
+                        source={require('../../../../assets/images/newfeeds.jpg')}
                     />
                 </View>
             </View>

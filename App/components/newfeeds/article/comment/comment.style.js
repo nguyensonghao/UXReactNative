@@ -18,7 +18,8 @@ export const style = {
     contentContainer: {
         backgroundColor: '#f5f5f5',
         padding: 6,
-        borderRadius: 4
+        borderRadius: 4,
+        flex: 1
     },
 
     avatarImage: {
