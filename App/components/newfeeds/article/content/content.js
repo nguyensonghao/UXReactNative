@@ -7,7 +7,7 @@ export default class Content extends Component {
     render() {
         const dimensions = Dimensions.get('window');
         const imageHeight = Math.round(dimensions.width * 9 / 16);
-        const imageWidth = dimensions.width;
+        const imageWidth = dimensions.width - 26;
 
         return (
             <View style={style.content}>
@@ -17,7 +17,7 @@ export default class Content extends Component {
                         Đây là động thái rất cần thiết và phải làm rốt ráo khi hợp đồng hiện tại của đôi bên sẽ mãn hạn vào tháng 1 năm sau - thời điểm mà đội U23 Việt Nam của nhà cầm quân 60 tuổi người Hàn Quốc này đang bận túi bụi với việc dự VCK U23 châu Á 2020 cũng diễn ra tại xứ sở Chùa Vàng.
                     </Text>
                 </View>
-                <View>
+                <View style={style.imageContainer}>
                     <Image
                         style={{ height: imageHeight, width: imageWidth }}
                         source={require('../../../../assets/images/newfeeds.jpg')}

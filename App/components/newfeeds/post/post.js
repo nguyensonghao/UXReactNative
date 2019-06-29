@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { View, Text, Image, TextInput } from 'react-native';
+import { View, Text, Image, TextInput, TouchableOpacity } from 'react-native';
 
 import { style } from './post.style';
 
 class Post extends Component {
     render() {
         return (
-            <View style={style.container}>
+            <TouchableOpacity style={style.container} onPress={() => this.props.showFullEditor()}>
                 <View style={style.header}>
                     <Text style={style.headerText}>Đăng bài</Text>
                 </View>
@@ -18,12 +18,13 @@ class Post extends Component {
                         />
                     </View>
                     <View style={style.inputContainer}>
-                        <TextInput
+                        {/* <TextInput
                             style={style.input}
                             editable = {true}
                             maxLength = {40}
                             placeholder="Bạn đang nghĩ gì!"
-                        />
+                        /> */}
+                        <Text style={style.input}>Bạn đang nghĩ gì!</Text>
                     </View>                    
                 </View>
                 <View style={style.footer}>
@@ -36,8 +37,8 @@ class Post extends Component {
                             Đăng ảnh
                         </Text>
                     </View>
-                </View>       
-            </View>
+                </View>
+            </TouchableOpacity>
         )
     }
 }

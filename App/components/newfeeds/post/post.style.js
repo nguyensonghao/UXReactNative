@@ -1,7 +1,8 @@
 export const style = {
     container: {
         backgroundColor: 'white',
-        marginBottom: 10
+        marginBottom: 10,
+        borderRadius: 4
     },
 
     header: {
@@ -20,19 +21,26 @@ export const style = {
         flexDirection: 'row',
         borderWidth: 1,
         borderColor: '#d8d7d7',
-        padding: 6
+        borderLeftWidth: 0,
+        borderRightWidth: 0,
+        padding: 6,
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingTop: 12,
+        paddingBottom: 12
     },
 
     avatarContainer: {
         borderRadius: 20,
         width: 40,
-        height: 40
+        height: 40,
+        marginRight: 6
     },
 
     avatarImage: {
         width: 40,
         height: 40,
-        borderRadius: 20,
+        borderRadius: 20        
     },
 
     inputContainer: {

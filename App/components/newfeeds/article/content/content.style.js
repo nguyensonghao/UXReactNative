@@ -12,8 +12,7 @@ export const style = {
         lineHeight: 20
     },
 
-    image: {
-        width: '100%',
-        height: 40
+    imageContainer: {
+        flex: 1
     }
 }
