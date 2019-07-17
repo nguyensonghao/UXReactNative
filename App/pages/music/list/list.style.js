@@ -1,14 +1,26 @@
-import { color } from '../../../utils/themes';
+import { layout } from '../../../utils/themes';
 
 export const style = {
-    controlContainer: {
-        flexDirection: 'row'
+    container: {
+        flex: 1
     },
-    btnControl: {
-        flex: 1,
-        alignItems: 'center'
-    },
-    btnPlay: {
 
+    info: {
+        ...layout.center,
+        alignItems: 'center',
+        marginTop: 60
+    },
+
+    name: {
+        color: 'white',
+        fontSize: 18,
+        fontWeight: '500'
+    },
+
+    footer: {
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        bottom: 0
     }
 }
