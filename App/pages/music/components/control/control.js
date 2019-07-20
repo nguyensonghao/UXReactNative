@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { View, TouchableOpacity, Slider, Text } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import { View } from 'react-native';
 
-import { style } from './control.style';
 import ControlMusic from './controlMusic/controlMusic';
 import SliderTime from './sliderTime/sliderTime';
 

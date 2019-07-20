@@ -3,7 +3,7 @@ import { View, ImageBackground, Text } from 'react-native';
 import TrackPlayer from 'react-native-track-player';
 
 import Control from '../components/control/control';
-import Toolbar from '../components/toolbar/toolbar';
+import Info from '../components/info/info';
 import { style } from './list.style';
 
 export default class Music extends Component {
@@ -57,10 +57,7 @@ export default class Music extends Component {
         return (
             <ImageBackground source={require('../../../assets/images/background/moon.jpg')} 
                 style={style.container}>
-                <View style={style.info}>
-                    <Text style={style.name}>Hãy trao cho anh</Text>
-                </View>
-                <Toolbar/>
+                <Info/>
                 <View style={style.footer}>
                     <Control
                         isPlaying={isPlaying}
