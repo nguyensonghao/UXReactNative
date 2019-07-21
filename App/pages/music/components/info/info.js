@@ -38,7 +38,7 @@ class Info extends Component {
                 />
                 <View style={style.containerToolbar}>
                     <TouchableHighlight style={style.btnToolbar}>
-                        <Icon name="heart-empty" size={20} color="white"/>
+                        <Icon name="ios-code-download" size={20} color="white"/>
                     </TouchableHighlight>
                     <TouchableHighlight style={style.btnToolbar}>
                         <Icon name="ios-code-download" size={20} color="white"/>

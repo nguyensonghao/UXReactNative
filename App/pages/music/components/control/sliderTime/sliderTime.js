@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { View, Slider, TouchableOpacity, Text } from 'react-native';
 
 import { style } from './sliderTime.style';
-import { color } from '../../../../../utils/themes';
 
 class SliderTime extends Component {
     render() {

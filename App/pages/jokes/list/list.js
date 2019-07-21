@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import { View, TouchableOpacity, Image, Text } from 'react-native';
+import { View } from 'react-native';
 
-import { style } from './jokes.style';
+import { style } from './list.style';
 import Box from './box/box';
 
-export default class Jokes extends Component {
+export default class ListJokes extends Component {
+    static navigationOptions = {
+        title: 'Giải trí'
+    }
+
     render() {
         return (
             <View>

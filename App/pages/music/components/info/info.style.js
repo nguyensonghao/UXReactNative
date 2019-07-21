@@ -3,9 +3,9 @@ import { layout } from '../../../../utils/themes';
 export const style = {
     container: {
         ...layout.center,
-        backgroundColor: '#0000004d',
-        borderColor: '#000000cc',
-        borderWidth: 0.5,
+        // backgroundColor: '#0000004d',
+        // borderColor: '#000000cc',
+        // borderWidth: 0.5,
         width: '80%',
         marginLeft: '10%',
         marginTop: 40,

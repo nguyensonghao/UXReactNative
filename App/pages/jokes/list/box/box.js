@@ -12,7 +12,7 @@ class Box extends Component {
             <TouchableOpacity style={style.container}>
                 <Image
                     style={style.icon}
-                    source={require('../../../assets/images/animal.jpg')}
+                    source={require('../../../../assets/images/animal.jpg')}
                 />
                 <Text style={style.title}>{title}</Text>
             </TouchableOpacity>
