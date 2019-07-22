@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, Button } from 'react-native';
 
 import { style } from './list.style';
 import Box from './box/box';
+import ButtonMenu from '../../../components/buttonMenu/buttonMenu';
 
 export default class ListJokes extends Component {
     static navigationOptions = {
-        title: 'Giải trí'
+        title: 'Giải trí',
+        headerLeft: (
+            <ButtonMenu/>
+        )
     }
 
     render() {

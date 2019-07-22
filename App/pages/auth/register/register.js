@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { View, ScrollView, TextInput, TouchableOpacity, Text, Image } from 'react-native';
 
-import { showToast } from '../../../services/util';
-import * as authService from '../auth.service';
-
+import ButtonOnlyIcon from '../../../components/buttonOnlyIcon/buttonOnlyIcon';
 import { style } from '../login/login.style';
+import { style as styleRegister } from './register.style';
+import * as authService from '../auth.service';
+import { getMessageError } from '../../../helpers/firebase';
+import { showToast } from '../../../services/util';
 
 class Register extends Component {
     static navigationOptions = {
@@ -28,7 +30,7 @@ class Register extends Component {
                     showToast('Đăng ký tài khoản thành công!');
                     this.props.navigation.goBack();
                 } else {
-                    showToast(res.message);
+                    showToast(getMessageError(res.message));
                 }
             })
         } else {
@@ -36,11 +38,20 @@ class Register extends Component {
         }   
     }
 
+    goBack = () => {
+        this.props.navigation.goBack();
+    }
+
     render() {
         const { username, password, passwordConfirm } = this.state;
 
         return (
             <ScrollView style={style.container}>
+                <ButtonOnlyIcon 
+                    style={styleRegister.backButton}
+                    size={26}
+                    name="arrowleft"
+                    press={() => this.goBack()}/>
                 <View style={style.logoContainer}>
                     <Image
                         style={style.logo}

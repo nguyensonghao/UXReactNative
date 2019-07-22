@@ -21,4 +21,18 @@ const layout = {
     }
 }
 
-export { color, form, layout }
+const drawer = {
+    drawer: {
+        backgroundColor: 'white',
+        shadowColor: '#000000', 
+        shadowOpacity: 0.8, 
+        shadowRadius: 3,
+        borderRightWidth: 1,
+        borderRightColor: '#eeeeee'
+    },
+    main: {
+        backgroundColor: 'black',
+    }
+}
+
+export { color, form, layout, drawer }

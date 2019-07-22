@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import Drawer from 'react-native-drawer';
 import { View } from 'react-native';
-import { createAppContainer } from 'react-navigation';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-import Loading from './App/components/loading/loading';
+import DrawerMenu from './App/components/drawerMenu/drawerMenu';
 import reducer from './App/reducers/index';
 import Navigation from './App/navigation';
+import { drawer as drawerStyle } from './App/utils/themes';
 
 const store = createStore(
 	reducer
@@ -16,30 +17,44 @@ class App extends Component {
 	constructor (props) {
 		super(props);
 		this.state = {
-			loading: false
+			loading: false,
+			openDrawer: false
 		}
 	}
 
 	componentDidMount() {
 		store.subscribe(() => {
-			const { loading } = store.getState();
-			this.setState({loading});
+			const { layout } = store.getState();
+			this.setState({
+				openDrawer: layout.openDrawer
+			})
 		})
 	}
-	
 
 	render () {
-		const { loading } = this.state;
+		const { openDrawer } = this.state;
 
 		return (
-			<Provider store={store}>
-				<View style={{flex: 1}}>				
-					<Navigation/>
-					<Loading
-						status={loading}
-					/>
-				</View>
-			</Provider>			
+			<Drawer
+				ref={(ref) => this._drawer = ref}
+				type="overlay"
+				content={<DrawerMenu />}
+				tapToClose={true}
+				open={openDrawer}
+				openDrawerOffset={0.2}
+				panCloseMask={0.2}
+				closedDrawerOffset={-3}
+				styles={drawerStyle}
+				tweenHandler={(ratio) => ({
+					main: { opacity: (2-ratio)/2 }
+				})}
+			>			
+				<Provider store={store}>
+					<View style={{flex: 1}}>				
+						<Navigation/>
+					</View>
+				</Provider>
+			</Drawer>
 		)
 	}
 }

@@ -5,11 +5,18 @@ import Login from './pages/auth/login/login';
 import Register from './pages/auth/register/register';
 import Music from './pages/music/detail/detail';
 import ListMusic from './pages/music/list/list';
-import ListJoke from './pages/jokes/list/list';
+import ListJokes from './pages/jokes/list/list';
+import Home from './pages/home/home.container';
 
-export const MainNavigator = createStackNavigator({	
-	ListJoke: {
-		screen: ListJoke
+export const MainNavigator = createStackNavigator({
+	Home: {
+		screen: Home
+	},
+	Login: {
+		screen: Login
+	},
+	ListJokes: {
+		screen: ListJokes
 	},
 	ListMusic: {
 		screen: ListMusic
@@ -19,10 +26,7 @@ export const MainNavigator = createStackNavigator({
 	},
 	NewFeeds: {
 		screen: NewFeeds
-	},
-	Login: {
-		screen: Login
-	},
+	},	
 	Register: {
 		screen: Register
 	}	

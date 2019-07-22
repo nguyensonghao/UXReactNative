@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ScrollView } from 'react-native';
 
+import ButtonMenu from '../../../components/buttonMenu/buttonMenu';
 import Post from '../components/post/post';
 import FullEditor from '../components/fullEditor/fullEditor';
 import Article from '../components/article/article';
@@ -9,7 +10,10 @@ import { style } from './list.style';
 
 class NewFeeds extends Component {
     static navigationOptions = {
-        title: 'Trạng thái',
+		title: 'Trạng thái',
+		headerLeft: (
+            <ButtonMenu/>
+        )
     }
 
     constructor (props) {

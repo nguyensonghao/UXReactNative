@@ -22,7 +22,7 @@ class Login extends Component {
         const { username, password } = this.state;
         authService.login(username, password).then(res => {
             if (res.status) {
-
+                this.props.navigation.navigate('NewFeeds');
             } else {
                 showToast(res.message);
             }
